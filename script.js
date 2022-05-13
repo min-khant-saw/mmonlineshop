@@ -5,6 +5,19 @@ const load = document.querySelector(".features-load");
 const countDownAd = document.getElementsByClassName("count-down-ad")[0];
 const countDownText = document.getElementsByClassName("count-down-text")[0];
 const adContainer = document.getElementsByClassName("contariner-ads")[0];
+const btnLight = document.querySelectorAll(".btn-light");
+
+window.addEventListener("resize", () => {
+  if (innerWidth <= 1024) {
+    btnLight.forEach((v) => {
+      v.className = "btn btn-dark ads-btn";
+    });
+  } else {
+    btnLight.forEach((v) => {
+      v.className = "btn btn-light ads-btn";
+    });
+  }
+});
 
 const totalStar = 5;
 
