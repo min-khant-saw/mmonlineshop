@@ -448,14 +448,14 @@
   align-items: center;
   gap: 10px;
   margin: 10px auto !important;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: #011c3c;
   max-height: 400px;
 }
 
 .vd-ads video {
   max-width: 600px;
-  aspect-ratio: 2 /1;
+  aspect-ratio: 2 / 1;
   object-fit: cover;
   object-position: center;
 }
@@ -482,7 +482,31 @@
   margin: 5px !important;
 }
 
+.company {
+  margin: 30px auto !important;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.company img {
+  max-width: 150px;
+  max-height: 150px;
+  user-select: none;
+}
+
+footer {
+  background-color: #eee;
+  max-width: 100%;
+  height: 600px;
+}
+
 @media (max-width: 1024px) {
+  .company {
+    display: none;
+  }
   .vd-ads .vd-ads-body h1,
   .vd-ads .vd-ads-body span {
     color: #212529;
