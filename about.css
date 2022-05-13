@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  background: royalblue;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.menu img,
+button {
+  margin: 10px 20px;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 10px 0px;
+  padding: 0;
+}
+
+.logoContainer h4 {
+  margin-left: 10px;
+}
+
+.ulDiv {
+  position: relative;
+}
+
+ul li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.scroll {
+  background: red;
+  height: 5px;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+}
+
+.menu button {
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  background: white;
+  color: royalblue;
+}
+
+.aboutStart {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 70px;
+}
+
+h1 {
+  margin: 20px 10px;
+}
+
+.aboutStart button {
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background: royalblue;
+  color: white;
+}
+
+.phoneMenuDiv {
+  display: none;
+  transition: all 0.4s ease;
+}
+
+.phoneMenuDiv2 {
+  transform: rotate(90deg);
+  margin-bottom: 10px;
+}
+
+.phoneList {
+  transition: all 0.4s ease;
+}
+
+.phoneList2 {
+  position: fixed;
+  right: 0px;
+  top: 60px;
+  left: 0px;
+  background: royalblue;
+  width: 400px;
+}
+
+.phoneList a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.photoAndText {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  text-align: center;
+}
+
+.photoAndText img {
+  width: 300px;
+  height: 300px;
+  padding: 50px;
+  border: 2px solid black;
+}
+
+.company {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+  background: darkgray;
+}
+
+.company img {
+  padding: 20px;
+}
+
+.text {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.pDiv {
+  width: 400px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.end {
+  background: rgb(2, 5, 5);
+  color: white;
+}
+
+.top {
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.bottom {
+  padding: 20px 0px;
+  text-align: center;
+}
+
+span {
+  margin: 5px 15px;
+}
+
+@media (max-width: 800px) {
+  .menu ul {
+    display: none;
+  }
+  .menu button {
+    display: none;
+  }
+  .phoneMenuDiv {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+}
+
+.phone {
+  width: 50px;
+  height: 5px;
+  background: white;
+  margin: 7px 0px;
+  border-radius: 20px;
+}
