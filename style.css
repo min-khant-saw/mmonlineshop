@@ -448,13 +448,13 @@
   align-items: center;
   gap: 10px;
   margin: 10px auto !important;
-  /* overflow: hidden; */
   background-color: #011c3c;
-  max-height: 400px;
+  height: 400px;
 }
 
 .vd-ads video {
-  max-width: 600px;
+  max-width: 45%;
+  height: 100%;
   aspect-ratio: 2 / 1;
   object-fit: cover;
   object-position: center;
