@@ -458,6 +458,7 @@
   aspect-ratio: 2 / 1;
   object-fit: cover;
   object-position: center;
+  margin-right: auto !important;
 }
 
 .vd-ads .vd-ads-body {
