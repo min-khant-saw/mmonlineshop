@@ -2,15 +2,15 @@ import { cardCount } from "./addCard.js";
 
 $(".head-nav").html(`
   <div class="nav-bar">
-  <a class="nav-icon" href="#"
+  <a class="nav-icon" href="index.html"
     ><img src="./SVG/online-shopping-online-store-svgrepo-com.svg"
     loading="lazy"
   /></a>
   <i class="fa-solid fa-bars"></i>
   <ul>
-    <li class="nav-list"><a href="#">About</a></li>
-    <li class="nav-list"><a href="#">Items</a></li>
-    <li class="nav-list"><a href="#">Api</a></li>
+  <li class="nav-list"><a href="index.html">Home</a></li>
+  <li class="nav-list"><a href="product.html">Product</a></li>
+  <li class="nav-list"><a href="about.html">About</a></li>
     <li class="nav-list"><a href="#" class="add-card">Your Card <i class="fa-solid fa-bag-shopping"><span class="badge bg-warning text-dark card-count">${cardCount}</span></i></a></li>
   </ul>
   </div>
