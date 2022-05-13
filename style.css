@@ -444,7 +444,7 @@
 
 .vd-ads {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   gap: 10px;
   margin: 10px auto !important;
@@ -463,7 +463,7 @@
 
 .vd-ads .vd-ads-body {
   position: relative;
-  margin: 20px !important;
+  margin: 20px 30px !important;
   display: flex;
   justify-content: center;
   align-items: center;
