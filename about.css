@@ -164,6 +164,7 @@ h1 {
 .text {
   text-align: center;
   margin: 15px auto;
+  max-width: 80%;
 }
 
 .pDiv {
