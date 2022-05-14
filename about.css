@@ -175,8 +175,8 @@ button:hover {
 }
 
 .end {
-  background: rgb(2, 5, 5);
-  color: white;
+  background: #eeeeee;
+  color: #222;
 }
 
 .top {
@@ -191,6 +191,13 @@ button:hover {
 
 .bottom span {
   margin: 5px 15px;
+}
+
+.end-foot {
+  width: 100%;
+  padding: 30px 0px !important;
+  text-align: center;
+  background-color: #ccc;
 }
 
 @media (max-width: 1024px) {
