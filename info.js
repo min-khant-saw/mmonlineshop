@@ -13,19 +13,16 @@ fetch(`https://fakestoreapi.com/products/${productId}`)
     element(data);
     star(data);
     addCardRunFunc(false);
+    document.querySelector(".back").addEventListener("click", (e) => {
+      e.preventDefault();
+      history.back();
+    });
   })
   .catch((err) => {
     document.body.innerHTML =
       "<h3 class='error text-danger text-center'>Network Error Please Refresh The Page</h3>";
     console.log(err);
   });
-
-function test(data) {
-  data.map((e) => {
-    console.log(e.id);
-  });
-  return;
-}
 
 function element(data) {
   return (document.body.innerHTML = `
@@ -42,7 +39,7 @@ function element(data) {
           <span class="star-count">${data.rating.rate}</span>
   </div>
   <div class="btn-gp">
-    <a href="index.html" class="btn btn-danger">Back To Home Page</a>
+    <a href="javascript:void(0)" class="btn btn-danger back">Back To Home Page</a>
     <button type="button" class="btn btn-success addcard" productId=${data.id}>Add Card <i class="fa-solid fa-cart-plus"></i></button>
   </div>
   </div>
