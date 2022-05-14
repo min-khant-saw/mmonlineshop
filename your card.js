@@ -1,1 +1,1 @@
-import { RC, PC } from "./addCard.js";
+import { cMinus, cPlus } from "./addCard.js";
