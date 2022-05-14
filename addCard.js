@@ -46,4 +46,16 @@ function addCardRunFunc(mode) {
   return;
 }
 
-export { cardCount, cardProduct, card, addCard, addCardRunFunc };
+function removeCard(index) {}
+
+function plusCard() {}
+
+export {
+  cardCount,
+  cardProduct,
+  card,
+  addCard,
+  addCardRunFunc,
+  removeCard as cMinus,
+  plusCard as cPlus,
+};
