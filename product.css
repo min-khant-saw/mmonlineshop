@@ -19,7 +19,6 @@ li {
 .container-fluid {
   margin: 0;
   padding: 0;
-  /* height: 1000px; */
 }
 
 .nav-section {
@@ -28,6 +27,7 @@ li {
   top: 0;
   width: 100%;
   z-index: 100;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .nav-bar {
@@ -36,7 +36,6 @@ li {
   justify-content: space-between;
   align-items: center;
   background-color: #8096d7d1;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .nav-bar .nav-icon {
