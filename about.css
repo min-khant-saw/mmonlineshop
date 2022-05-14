@@ -144,12 +144,19 @@ h1 {
 }
 
 .company {
+  margin: 30px auto !important;
+  max-width: 100%;
   display: flex;
-  flex-flow: wrap;
-  justify-content: space-evenly;
-  background: darkgray;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
 }
 
+.company img {
+  max-width: 150px;
+  max-height: 150px;
+  user-select: none;
+}
 .company img {
   padding: 20px;
 }
@@ -187,6 +194,9 @@ button:hover {
 }
 
 @media (max-width: 1024px) {
+  .company {
+    display: none;
+  }
   .nav-bar {
     display: block;
     position: relative;
