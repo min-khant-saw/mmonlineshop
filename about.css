@@ -7,53 +7,75 @@
   font-family: "Poppins", sans-serif;
 }
 
-.menu {
-  display: flex;
-  justify-content: space-between;
-  background: royalblue;
-  color: white;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.menu img,
-button {
-  margin: 10px 20px;
-}
-
-.menu ul {
-  list-style: none;
-  margin: 10px 0px;
+ul,
+li {
+  margin: 0;
   padding: 0;
 }
 
-.logoContainer h4 {
-  margin-left: 10px;
+.nav-bar {
+  top: 0;
+  position: fixed !important;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background-color: #8096d7d1;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.4);
 }
 
-.ulDiv {
+.nav-bar .nav-icon {
+  margin-left: 10px !important;
+}
+
+.nav-bar .nav-icon img {
+  width: 70px;
+  height: 70px;
+}
+
+.nav-bar ul {
+  margin-right: 10px !important;
+  color: #fafafa;
+}
+
+.nav-bar ul .nav-list {
+  display: inline;
+  margin-right: 10px !important;
+}
+
+.nav-bar ul .nav-list a {
+  text-decoration: none;
+  margin-right: 5px !important;
+  color: inherit;
+  font-size: 1.2rem;
+}
+.nav-bar ul .nav-list a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+  color: #222;
+}
+
+.fa-bars {
+  display: none;
+  color: #fafafa;
+}
+
+.add-card i {
   position: relative;
 }
 
-ul li {
-  display: inline-block;
-  margin: 10px 20px;
-}
-
-.scroll {
-  background: red;
-  height: 5px;
-  border-radius: 20px;
-  transition: all 0.4s ease;
-}
-
-.menu button {
-  border: none;
-  padding: 10px 20px;
-  font-size: 15px;
-  background: white;
-  color: royalblue;
+.card-count {
+  position: absolute;
+  margin-left: 10px !important;
+  width: 12px;
+  height: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  left: 0;
+  top: 0;
 }
 
 .aboutStart {
@@ -160,21 +182,35 @@ button:hover {
   text-align: center;
 }
 
-span {
+.bottom span {
   margin: 5px 15px;
 }
 
-@media (max-width: 800px) {
-  .menu ul {
+@media (max-width: 1024px) {
+  .nav-bar {
+    display: block;
+    position: relative;
+  }
+  .fa-bars {
+    display: inline;
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    font-size: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .nav-bar ul {
+    border-top: 1px solid darkslategray;
+    width: 100%;
+  }
+  .nav-bar ul {
     display: none;
   }
-  .menu button {
-    display: none;
-  }
-  .phoneMenuDiv {
-    display: inline-block;
-    margin-right: 20px;
-    margin-top: 10px;
+  .nav-bar ul .nav-list a {
+    display: block;
+    text-align: center;
+    margin: 10px auto !important;
   }
 }
 
