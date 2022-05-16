@@ -22,13 +22,15 @@ function card() {
   });
 }
 
+let test;
+
 function addCard(e) {
-  if (cardProduct.some((item) => item === e.getAttribute("productId"))) {
+  if (cardProduct.some((item) => item.id === e.getAttribute("productId"))) {
     return;
   } else {
     cardCount++;
     localStorage.setItem("cardCount", cardCount);
-    cardProduct.push(e.getAttribute("productId"));
+    cardProduct.push({ id: e.getAttribute("productId") });
     localStorage.setItem("cardProduct", JSON.stringify(cardProduct));
     if (multiCardMod) {
       document.querySelector(".card-count").innerHTML = cardCount;

@@ -109,7 +109,7 @@ function htmlContent(data) {
         card();
         lengFunc(e);
         checkRunFunc();
-        addCardRunFunc(true);
+        addCardRunFunc(true, e);
         textId++;
       }
     })
