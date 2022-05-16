@@ -30,8 +30,8 @@ function element(data) {
             class="btn-group text-center w-100"
             role="group"
           >
-            <a href="" type="button" class="btn btn-danger">Cancel</a>
-            <a href="" type="button" class="btn btn-primary">Info</a>
+            <a href="javascript:void(0)" type="button" class="btn btn-danger">Cancel</a>
+            <a href="javascript:void(0)" type="button" class="btn btn-primary">Info</a>
           </div>
         </div>
       </div>

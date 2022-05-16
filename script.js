@@ -162,7 +162,7 @@ function checkRunFunc() {
 function check(id, event) {
   sessionStorage.setItem("productId", id);
   event.preventDefault();
-  location = "Product Info.html";
+  location = "ProductInfo.html";
   return;
 }
 
