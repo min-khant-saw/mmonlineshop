@@ -1,5 +1,7 @@
 import { cardCount } from "./addCard.js";
 
+const cardResult = cardCount === "null" ? 0 : cardCount;
+
 $(".head-nav").html(`
   <div class="nav-bar">
   <a class="nav-icon" href="index.html"
@@ -11,7 +13,7 @@ $(".head-nav").html(`
   <li class="nav-list"><a href="index.html">Home</a></li>
   <li class="nav-list"><a href="product.html">Product</a></li>
   <li class="nav-list"><a href="about.html">About</a></li>
-    <li class="nav-list"><a href="yourCard.html" class="add-card">Your Card <i class="fa-solid fa-bag-shopping"><span class="badge bg-warning text-dark card-count">${cardCount}</span></i></a></li>
+    <li class="nav-list"><a href="yourCard.html" class="add-card">Your Card <i class="fa-solid fa-bag-shopping"><span class="badge bg-warning text-dark card-count">${cardResult}</span></i></a></li>
   </ul>
   </div>
 `);

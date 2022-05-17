@@ -1,4 +1,5 @@
 import { addCardRunFunc, card } from "./addCard.js";
+import { checkRunFunc } from "./checkInfo.js";
 
 const swiper_wrapper = document.querySelector(".swiper-wrapper");
 const load = document.querySelector(".features-load");
@@ -108,7 +109,7 @@ function htmlContent(data) {
         rating(e);
         card();
         lengFunc(e);
-        checkRunFunc();
+        checkRunFunc(".check", "checkId");
         addCardRunFunc(true, e);
         textId++;
       }
@@ -149,21 +150,6 @@ function rating(e) {
   const starRound = (math / 10) * 10 + "%";
   realWidth.push({ starRound });
   document.getElementById(e.id).style.width = starRound;
-}
-
-function checkRunFunc() {
-  document.querySelectorAll(".check").forEach((v) => {
-    v.addEventListener("click", (event) => {
-      check(v.getAttribute("checkId"), event);
-    });
-  });
-}
-
-function check(id, event) {
-  sessionStorage.setItem("productId", id);
-  event.preventDefault();
-  location = "ProductInfo.html";
-  return;
 }
 
 function lengFunc(e) {

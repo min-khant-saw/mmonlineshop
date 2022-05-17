@@ -28,13 +28,13 @@ function addCard(e) {
   if (cardProduct.some((item) => item.id === e.getAttribute("productId"))) {
     return;
   } else {
+    cardCount === "null" ? (cardCount = 0) : cardCount;
     cardCount++;
     localStorage.setItem("cardCount", cardCount);
     cardProduct.push({ id: e.getAttribute("productId") });
     localStorage.setItem("cardProduct", JSON.stringify(cardProduct));
-    if (multiCardMod) {
+    if (multiCardMod)
       document.querySelector(".card-count").innerHTML = cardCount;
-    }
   }
 }
 
@@ -48,9 +48,28 @@ function addCardRunFunc(mode) {
   return;
 }
 
-function removeCard(index) {}
+function removeCard(id) {
+  for (let i = 0; i < cardProduct.length; i++) {
+    if (cardProduct[i].id === id) {
+      cardCount--;
+      cardProduct.splice(i, 1);
+      localStorage.setItem("cardProduct", JSON.stringify(cardProduct));
+      localStorage.setItem("cardCount", cardCount);
+    }
+  }
+  return;
+}
 
 function plusCard() {}
+
+function buyToRestart() {
+  cardProduct = null;
+  cardCount = null;
+  localStorage.setItem("cardProduct", JSON.stringify(cardProduct));
+  localStorage.setItem("cardCount", cardCount);
+
+  return;
+}
 
 export {
   cardCount,
@@ -60,4 +79,5 @@ export {
   addCardRunFunc,
   removeCard as cMinus,
   plusCard as cPlus,
+  buyToRestart as btr,
 };
