@@ -49,14 +49,21 @@ function addCardRunFunc(mode) {
 }
 
 function removeCard(id) {
-  for (let i = 0; i < cardProduct.length; i++) {
+  /**
+   * Idea 1
+    for (let i = 0; i < cardProduct.length; i++) {
     if (cardProduct[i].id === id) {
       cardCount--;
       cardProduct.splice(i, 1);
       localStorage.setItem("cardProduct", JSON.stringify(cardProduct));
       localStorage.setItem("cardCount", cardCount);
     }
-  }
+  } */
+  /** Idea 2 */
+  cardCount--;
+  cardProduct = cardProduct.filter((item) => item.id !== id);
+  localStorage.setItem("cardProduct", JSON.stringify(cardProduct));
+  localStorage.setItem("cardCount", cardCount);
   return;
 }
 
@@ -71,6 +78,11 @@ function buyToRestart() {
   return;
 }
 
+function myFunction(event) {
+  console.log(event);
+  return;
+}
+
 export {
   cardCount,
   cardProduct,
@@ -80,4 +92,5 @@ export {
   removeCard as cMinus,
   plusCard as cPlus,
   buyToRestart as btr,
+  myFunction,
 };

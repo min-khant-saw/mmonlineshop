@@ -1,4 +1,4 @@
-import { cMinus, cPlus, cardProduct, btr } from "./addCard.js";
+import { cMinus, cPlus, cardProduct, btr, myFunction } from "./addCard.js";
 import { checkRunFunc } from "./checkInfo.js";
 
 const row = document.querySelector(".row"),
@@ -7,10 +7,6 @@ const row = document.querySelector(".row"),
   buyBtn = document.querySelector(".buy");
 
 let idData = [];
-
-// if (!v) {
-//   buyBtn.disabled = true;
-// }
 
 fetch("https://fakestoreapi.com/products/")
   .then((respone) => respone.json())
@@ -42,7 +38,7 @@ function element(data) {
             class="btn-group text-center w-100"
             role="group"
           >
-            <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-outline-danger cancel-product">Cancel</a>
+            <a href="javascript:void(0)" onclick="myFunction()" class="btn btn-outline-danger cancel-product">Cancel</a>
             <a href="javascript:void(0)" class="btn btn-outline-primary info" check-id="${e.id}">Info</a>
           </div>
         </div>
@@ -56,28 +52,22 @@ function element(data) {
 }
 
 function delectProduct() {
-  document.querySelectorAll(".cancel-product").forEach((v) => {
-    v.addEventListener("click", (e) => {
-      document.querySelectorAll(".card-title").forEach((e) => {
-        alertText.innerHTML = `Are you sure you want to delete that <b>${e.textContent}?</b>`;
-      });
-    });
-  });
-  document.querySelectorAll(".col-xl").forEach((v) => {
-    v.addEventListener("click", (e) => {
-      document.querySelector(".ok").addEventListener("click", (el) => {
-        cMinus(v.getAttribute("product-id"));
-        cardTotal();
-        v.remove();
-      });
-    });
-  });
+  // const mainProducts = document.querySelectorAll(".col-xl"),
+  //   cancelBtn = document.querySelectorAll(".cancel-product");
+  // cancelBtn.forEach((cancleElement) => {});
 }
 
+// Are you sure you want to delete that ${e.textContent}?
+// cMinus(v.getAttribute("product-id"));
+// v.remove();
+
+let total = 0;
+let unit = 0;
 function cardTotal() {
-  let total = 0;
   idData.forEach((item) => {
     total += item.price * item.cardNumber;
+    unit += item.cardNumber;
+    return;
   });
   totalPrice.textContent = `$${total.toFixed(2)}`;
   return;
