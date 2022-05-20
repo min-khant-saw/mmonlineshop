@@ -1,4 +1,4 @@
-import { cMinus, cPlus, cardProduct, btr, myFunction } from "./addCard.js";
+import { cMinus, cPlus, cardProduct, btr } from "./addCard.js";
 import { checkRunFunc } from "./checkInfo.js";
 
 const row = document.querySelector(".row"),
@@ -23,7 +23,7 @@ function element(data) {
     if (cardProduct.find((item) => item.id == e.id)) {
       idData.push({ ...e, cardNumber: 1 });
       row.innerHTML += `
-      <div class="col-xl mx-auto" product-id="${e.id}">
+      <div class="col-xl mx-auto cancel-product" product-id="${e.id}">
       <div class="card my-card">
         <img src="${e.image}" class="card-img-top img-fluid" alt="" />
         <div class="card-body">
@@ -38,7 +38,7 @@ function element(data) {
             class="btn-group text-center w-100"
             role="group"
           >
-            <a href="javascript:void(0)" onclick="myFunction()" class="btn btn-outline-danger cancel-product">Cancel</a>
+            <a href="javascript:void(0)" class="btn btn-outline-danger cancel-product">Cancel</a>
             <a href="javascript:void(0)" class="btn btn-outline-primary info" check-id="${e.id}">Info</a>
           </div>
         </div>
@@ -52,9 +52,20 @@ function element(data) {
 }
 
 function delectProduct() {
-  // const mainProducts = document.querySelectorAll(".col-xl"),
-  //   cancelBtn = document.querySelectorAll(".cancel-product");
-  // cancelBtn.forEach((cancleElement) => {});
+  document.querySelectorAll(".col-xl").forEach((v) =>
+    v.addEventListener("click", () => {
+      return;
+    })
+  ),
+    (cancelBtn = document.querySelectorAll(".cancel-product"));
+  cancelBtn.forEach((cancleElement) => {
+    cancleElement.addEventListener("click", () => {
+      if (confirm(`Are you sure you want to delete that Products?`)) {
+        cMinus(cancleElement.getAttribute("product-id"), cardTotal);
+        cancleElement.remove();
+      }
+    });
+  });
 }
 
 // Are you sure you want to delete that ${e.textContent}?

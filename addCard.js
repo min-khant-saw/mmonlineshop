@@ -22,8 +22,6 @@ function card() {
   });
 }
 
-let test;
-
 function addCard(e) {
   if (cardProduct.some((item) => item.id === e.getAttribute("productId"))) {
     return;
@@ -48,7 +46,7 @@ function addCardRunFunc(mode) {
   return;
 }
 
-function removeCard(id) {
+function removeCard(id, callback) {
   /**
    * Idea 1
     for (let i = 0; i < cardProduct.length; i++) {
@@ -64,6 +62,7 @@ function removeCard(id) {
   cardProduct = cardProduct.filter((item) => item.id !== id);
   localStorage.setItem("cardProduct", JSON.stringify(cardProduct));
   localStorage.setItem("cardCount", cardCount);
+  callback();
   return;
 }
 
@@ -74,12 +73,6 @@ function buyToRestart() {
   cardCount = null;
   localStorage.setItem("cardProduct", JSON.stringify(cardProduct));
   localStorage.setItem("cardCount", cardCount);
-
-  return;
-}
-
-function myFunction(event) {
-  console.log(event);
   return;
 }
 
@@ -92,5 +85,4 @@ export {
   removeCard as cMinus,
   plusCard as cPlus,
   buyToRestart as btr,
-  myFunction,
 };
